@@ -35,7 +35,7 @@ async function replace(id,number){
 
 async function change(req, res) {
     try {
-        const { query } = req.query;
+        const { query } = req.params;
         if (!query || typeof query !== "string") {
             return res.status(400).json({ error: "Invalid query" });
         }

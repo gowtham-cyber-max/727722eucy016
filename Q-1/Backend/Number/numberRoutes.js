@@ -4,7 +4,7 @@ const router=express.Router();
 
 
 
-router.route("/").post(change);
+router.route("/:query").post(change);
 
 router.route("/add-user").post(addUser);
 

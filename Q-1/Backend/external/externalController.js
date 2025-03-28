@@ -11,7 +11,7 @@ const prime = async () => {
       },
     });
     
-    return numbers;
+    return response.data.numbers;
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
