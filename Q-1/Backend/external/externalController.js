@@ -3,15 +3,15 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './.env' });
 
 
-const prime = async (req, res) => {
+const prime = async () => {
   try {
     const response = await axios.get(process.env.API_URL, {
       headers: {
         Authorization: `Bearer ${process.env.API_KEY}`,
       },
     });
-    console.log(response.data.numbers);
-    return response.data.numbers;
+    
+    return numbers;
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

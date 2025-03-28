@@ -15,9 +15,9 @@ app.use(express.json());
 const conn=connectToMongo();
 
 //routes
-const externalRoutes=require('./external/externalRouter');
+const numberRoutes=require('./Number/numberRoutes');
 
-app.use("/external",externalRoutes);
+app.use("/numbers",numberRoutes);
 
 
 //port 
